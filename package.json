@@ -18,7 +18,7 @@
     "contract:bind": "node scripts/bind.cjs",
     "contract:unbind": "node scripts/unbind.cjs",
     "contract:deploy": "node scripts/contract-deploy.cjs --name Counter",
-    "contract:build": "solc -o ./build/contract/ --via-ir --abi --storage-layout --bin ./contracts/*.sol --overwrite",
+    "contract:build": "solcjs -o ./build/contract/ --abi --bin ./contracts/counter.sol ",
     "build": "npm run contract:build && npm run aspect:gen && npm run aspect:build"
   },
   "keywords": [],
@@ -28,7 +28,8 @@
     "@artela/aspect-libs": "^0.0.33",
     "@artela/web3": "^1.9.22",
     "@assemblyscript/loader": "^0.27.23",
-    "as-proto": "^1.3.0"
+    "as-proto": "^1.3.0",
+    "solc": "^0.8.26"
   },
   "devDependencies": {
     "@artela/aspect-tool": "^0.0.57",
